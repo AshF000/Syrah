@@ -25,15 +25,23 @@ $(function () {
     slidesToScroll: 1,
     prevArrow: '.update_left_arrow',
     nextArrow: '.update_right_arrow',
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      },
-    ]
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }, ]
+  });
+
+  //TIMER FOR THE DEAL
+  $('.timer').startTimer({
+    classNames: {
+      hours: 'hours',
+      minutes: 'minutes',
+      seconds: 'minutes',
+    }
+
   });
 
 
