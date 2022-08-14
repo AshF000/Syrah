@@ -34,16 +34,36 @@ $(function () {
     }, ]
   });
 
-  //TIMER FOR THE DEAL
-  $('.timer').startTimer({
-    classNames: {
-      hours: 'hours',
-      minutes: 'minutes',
-      seconds: 'minutes',
-    }
+  /////////////////////////////////////////////////////////////////////////////////////////////
 
-  });
+  // TIMER FOR THE DEAL
+  const countdown = () => {
+    const countDate = new Date("January 01, 2023 00:00:00").getTime()
+    const now = new Date().getTime();
+    const gap = countDate - now;
 
+    //EXPLAIN HOW TIME WORKS
+    const second = 1000;
+    const minute = second * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
+
+    //CALCULATE THE TIME
+    const textDay = Math.floor(gap / day);
+    const textHour = Math.floor((gap % day) / hour);
+    const textMinute = Math.floor((gap % hour) / minute);
+    const textSecond = Math.floor((gap % minute) / second);
+    //TEST IN CONSOLE [console.log(textDay, textHour, textMinute, textSecond);]
+
+    //EXECUTE THE TIME
+    document.querySelector(".days").innerText = textDay;
+    document.querySelector(".hours").innerText = textHour;
+    document.querySelector(".minutes").innerText = textMinute;
+    document.querySelector(".seconds").innerText = textSecond;
+  };
+  setInterval(countdown, 1000)
+
+  /////////////////////////////////////////////////////////////////////////////////////////////
 
   //ACTIVE FOOTER MENU
   $(".foot_menu_opt").click(function () {
