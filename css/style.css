@@ -87,6 +87,28 @@ a {
     text-decoration: none;
 }
 
+.menutoggle{
+    width: 36px;
+    height: 30px;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid rgba(128, 128, 128, 0.312);
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.menutogglebar{
+    width: 80%;
+    background: white;
+    color: red;
+    height: 2.5px;
+    display: block;
+    border-radius: 20px;
+}
+
 /* COMMON CSS END */
 
 /* COMMON DESIGN CSS START */
@@ -209,9 +231,6 @@ a {
     width: 100%;
 }
 
-/* #myNav ul li {
-    padding-left: 56px;
-} */
 
 #myNav ul li a {
     color: #fff;
@@ -226,11 +245,8 @@ a {
     -o-transition: .4s ease-in-out;
 }
 
-.active {
-    color: var(--primary-color) !important;
-}
-
-#myNav ul li a:hover {
+#myNav ul .nav-item a:hover,
+#myNav ul .nav-item a.nav_menu_active {
     color: var(--primary-color) !important;
 }
 
@@ -1426,7 +1442,7 @@ a {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    width: 100%;
+    width: 90%;
     height: 770px;
 }
 
