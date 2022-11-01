@@ -263,10 +263,10 @@
     background-color: var(--secondary-color);
   }
 
-  .product_heading h2:after,
+  /* .product_heading h2:after,
   .product_heading h2:before {
     width: 100%;
-  }
+  } */
 
   .story_heading,
   .contact_details {
